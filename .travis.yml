@@ -8,7 +8,6 @@ services:
 env:
   - NODE_ENV=ci
   - PORT=3000
-  - JOB=new
 cache:
   directories:
     - node_modules
