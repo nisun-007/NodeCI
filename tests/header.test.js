@@ -4,7 +4,7 @@ let page;
 
 beforeEach(async () => {
     page = await Page.build();
-    await page.goto('localhost:3000');
+    await page.goto('http://localhost:3000');
 });
 
 afterEach(async () => {
@@ -16,7 +16,7 @@ test('the header has the correct test', async () => {
     expect(text).toEqual('Blogster');
 });
 
-test.skip('clicking logging starts oauth flow', async () => {
+test('clicking logging starts oauth flow', async () => {
     await page.click('.right a');
 
     const url = await page.url();
